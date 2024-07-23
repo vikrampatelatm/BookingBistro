@@ -1,0 +1,47 @@
+<div class="navbar">
+    <nav>
+      <div class="logo">Bistro</div>
+      <app-location></app-location>
+      <form (submit)="onSearch()">
+        <input type="search" class="search-data" placeholder="Search for restaurant, cuisine, or a dish"
+               [(ngModel)]="searchQuery" name="search" (input)="onSearch()">
+        <button type="submit" class="btn">Search</button>
+      </form>
+      <button class="btns" (click)="myBooking()">MyBooking</button>
+    </nav>
+  </div>
+  <app-banner></app-banner>
+
+  <div class="body">
+    <p class="heading-text">Table booking for restaurants in Bangalore</p>
+    <div class="card-container">
+      <div *ngFor="let restaurant of paginatedRestaurants">
+        <div class="box" (click)="handleClick(restaurant.id)">
+          <div class="img-div">
+            <img [src]="'../../../assets/images/' + restaurant.name + '.avif'" alt="{{ restaurant.name }}"
+                 class="image-tag">
+            <div class="bottom">
+              <div class="d1">
+                <span class="name">{{restaurant.name}} </span>
+                <span class="rating">⭐{{restaurant.rating}}  </span>
+              </div>
+              <div>
+                <span class="cuisines">{{ restaurant.cuisines }}</span>
+              </div>
+              <div>
+                <span class="address">{{ restaurant.location.length > 38 ? restaurant.location.substr(0, 38) + '...' : restaurant.location }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-paginator [length]="length"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="pageSizeOptions"
+                   (page)="paginateRestaurants($event)">
+    </mat-paginator>
+  </div>
+  
+  
+  

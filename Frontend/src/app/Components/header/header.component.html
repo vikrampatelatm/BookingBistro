@@ -1,0 +1,10 @@
+<div class="navbar">
+    <nav>
+        <div class="logo">Bistro</div>
+        <form (submit)="onSearch">
+            <input type="search" class="search-data" placeholder="Search for restaurant,cusine or a dish" [(ngModel)]="searchQuery" name="search" (input)="onSearch()">
+            <button type="submit" class="btn">Search</button>
+        </form>
+        <button class="btns" (click)="logout()">Logout</button>
+    </nav>
+</div>

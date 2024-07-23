@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="container">
+    <div class="first">
+        <div class="img">
+            <img  [src]="'../../../assets/images/' + restaurant.name + '.avif'" alt="{{ restaurant.name }}" />
+        </div>
+        <div class="txt">
+          <div class="d1">
+            <p class="heading">{{restaurant.name}}</p>
+            <p class="rating">⭐{{restaurant.rating}}</p>
+          </div>
+          <div class="d2">
+            <p class="location">{{ restaurant.cuisines }}</p>
+            <p class="location">{{restaurant.location}}</p>
+          </div>
+        </div>
+    </div>
+</div>
+<app-booking></app-booking>
+<app-footer></app-footer>
+

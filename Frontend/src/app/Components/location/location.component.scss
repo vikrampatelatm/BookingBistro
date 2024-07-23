@@ -1,0 +1,33 @@
+.box{
+    background-color: rgb(0, 0, 0);
+    padding: 2px;
+    border-radius: 5px;
+    height: 35px;
+    text-align: center;
+}
+.sub-box{
+    background-color: white;
+    border: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boss{
+    justify-content: center;
+    align-items: center;
+}
+
+select{
+    justify-content: center;
+    align-items: center;
+}
+
+select option{
+   margin-left: 10px;
+}
+
+.loc-img{
+    height: 10px;
+    width: 10px;
+}

@@ -1,0 +1,60 @@
+<app-header></app-header>
+  <div class="wrap">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="restaurantName">
+        <th mat-header-cell *matHeaderCellDef>Restaurant</th>
+        <td mat-cell *matCellDef="let booking">{{booking.restaurantName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="dateAndTime">
+        <th mat-header-cell *matHeaderCellDef>Booking Date</th>
+        <td mat-cell *matCellDef="let booking">{{booking.date}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="slotTime">
+        <th mat-header-cell *matHeaderCellDef>Slot Time</th>
+        <td mat-cell *matCellDef="let booking">{{booking.slotTime}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="guestCount">
+        <th mat-header-cell *matHeaderCellDef>Guests</th>
+        <td mat-cell *matCellDef="let booking">{{booking.guestCount}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="bookingStatus">
+        <th mat-header-cell *matHeaderCellDef>Status</th>
+        <td mat-cell *matCellDef="let booking">
+          <span [ngClass]="{
+          'status-confirmed': booking.bookingStatus === 'confirmed',
+          'status-rejected': booking.bookingStatus === 'rejected',
+          'status-pending': booking.bookingStatus === 'pending',
+          'status-cancelled': booking.bookingStatus === 'cancelled'
+        }">
+            {{booking.bookingStatus}}
+          </span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="daysRemaining">
+        <th mat-header-cell *matHeaderCellDef>Days Remaining</th>
+        <td mat-cell *matCellDef="let booking">{{booking.daysRemaining}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let booking">
+          <button *ngIf="booking.bookingStatus === 'pending'" mat-button
+            (click)="cancelBooking(booking.id)">Cancel</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [length]="totalBookings" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20]"
+      (page)="onPageChange($event)">
+    </mat-paginator>
+  </div>
+
+<app-footer></app-footer>

@@ -1,0 +1,254 @@
+
+ 
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  body{
+    background: #f2f2f2;
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+    height: 100vh; 
+  }
+  .body{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .navbar {
+    box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #fff;
+    z-index: 1000;
+    padding: 0 20px;
+    width: 100%;
+
+  }
+  nav{
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    padding: 0 100px;
+    border-bottom: 5px black;
+  }
+  nav .logo{
+    color: #000000;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+  nav .nav-items{
+    display: flex;
+    flex: 1;
+    padding: 0 0 0 40px;
+  }
+  nav .nav-items li{
+    list-style: none;
+    padding: 0 15px;
+  }
+  nav .nav-items li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  nav .nav-items li a:hover{
+    color: #26d63b;
+  }
+  nav form{
+    display: flex;
+    height: 40px;
+    padding: 2px;
+    color:black;
+    min-width: 18%!important; 
+    border: 1px solid rgba(155,155,155,0.2);
+    border-radius: 10px;
+    width: 50%;
+  }
+  nav form .search-data{
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    
+    font-size: 17px;
+    border: none;
+    font-weight: 500;
+    background: none;
+  }
+  nav form button{
+    padding: 0 15px;
+    color: #fff;
+    font-size: 17px;
+    background: rgb(239,79,95);
+    border: none;
+    border-radius: 2px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+    transition: .2s all;
+  }
+  nav form button:hover{
+    background: #2b9638;
+  }
+
+  .btns{
+    padding: 0 15px;
+    color: #fff;
+    font-size: 17px;
+    height: 35px;
+    background: rgb(239,79,95);
+    border: none;
+    border-radius: 5px;
+   
+    cursor: pointer;
+    transition: .2s all;
+  }
+ 
+
+
+
+
+
+
+//card
+.body {
+ // background: linear-gradient(135deg, #FF000F 2.88%, #5200FF 98.14%);
+  //background: linear-gradient(135deg, #6764ce 2.88%, #301667 98.14%);
+  color: black;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  color: rgb(244, 189, 189);
+
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  border-radius: 10px;
+  padding-top: 30px;
+}
+
+.box {
+  width: 320px;
+  height: 380px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.img-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+
+}
+
+.image-tag {
+  height: 300px;
+  width: 300px;
+  border-radius: 7px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.rating {
+  margin: 1px;
+}
+
+.time {
+  margin: 1px;
+
+
+}
+
+.tag {
+  margin: 1px;
+  border: 1px rgb(135, 131, 131) solid;
+  font-size: 0.5em;
+  color: rgb(5, 5, 5);
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn2 {
+  justify-content: right;
+  margin-right: 10vw;
+}
+
+button {
+  color: white;
+  background-color: #f03030;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+.header-title {
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.d1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.d1 .rating{
+ margin-right: 20px;
+}
+
+.d1 .name{
+  font-size: large;
+}
+
+.cuisines{
+  margin-top: 15px;
+}
+
+.heading-text{
+  color: black;
+  font-size: x-large;
+  font-weight: 800;
+}
+.second{
+  margin-bottom: 100px;
+}

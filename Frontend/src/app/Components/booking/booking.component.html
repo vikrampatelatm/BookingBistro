@@ -1,0 +1,34 @@
+<p class="txt-1">Book a Table</p>
+<div class="booking-container">
+  <form (ngSubmit)="onBook()">
+    <label class="txt-2">Select your booking details</label>
+    <div class="menu">
+      <div class="first">
+        <label for="booking-date">Booking Date:</label>
+        <select id="booking-date" [(ngModel)]="selectedDate" name="bookingDate" (change)="onDateChange()" required>
+          <option *ngFor="let date of dates" [value]="date">{{ date }}
+          </option>
+        </select>
+      </div>
+      <div class="second"> 
+        <label for="guests">Number of Guests:</label>
+        <select id="guests" [(ngModel)]="selectedGuests" name="guests" (change)="onGuestsChange()" required>
+          <option *ngFor="let guest of guests" [value]="guest">{{ guest }} guests</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="third">
+      <div class="slots-container">
+        <label class="txt-2">Select a Slot:</label>
+        <div class="slots">
+          <div *ngFor="let slot of slots" class="slot" [class.selected]="slot === selectedSlot"
+            (click)="onSlotSelect(slot)">
+            {{ slot }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn">Book</button>
+  </form>
+</div>

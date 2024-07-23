@@ -1,0 +1,97 @@
+.wrap{
+  margin-top: 120px;
+  width: 90%;
+  margin-left: 100px;
+}
+
+
+
+
+.status-confirmed {
+  color: green;
+}
+
+.status-rejected {
+  color: red;
+}
+
+.status-pending {
+  color: orange;
+}
+
+.status-cancelled {
+  color: grey;
+}
+
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+mat-form-field {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+}
+
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 16px;
+  border-collapse: collapse;
+}
+
+mat-header-row, mat-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-header-cell, mat-cell {
+  flex: 1;
+  text-align: center;
+  padding: 8px 16px;
+}
+
+mat-header-cell {
+  font-weight: bold;
+}
+
+.status-confirmed {
+  color: green;
+}
+
+.status-rejected {
+  color: red;
+}
+
+.status-pending {
+  color: orange;
+}
+
+.status-cancelled {
+  color: grey;
+}
+
+
+mat-row:hover {
+  background-color: #f1f1f1;
+}
+
+.actions button {
+  margin: 0 4px;
+}
+
+.mat-paginator {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-elevation-z8{
+  border-radius: 50px;
+}

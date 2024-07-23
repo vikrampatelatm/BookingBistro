@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="wrapper" >
+        <div class="box">
+            <div class="heading">
+                <p>Welcome to bistro</p>
+            </div>
+            <div class="texts">
+                <form [formGroup]="LoginForm">
+                    <label>Email</label><br>
+                    <input  placeholder=""   formControlName="email" type="text">
+                    <br>
+                    <label>Password</label><br>
+                    <input [type]="getIputType1()" formControlName="password">
+
+                    <button mat-icon-button matSuffix (click)="visibilityToggle1()">
+                        <mat-icon>{{getVisibility1()}}</mat-icon>
+                    </button>
+                    <br>
+                    <button class="btn" type="submit" (click)="onLogin()" >Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

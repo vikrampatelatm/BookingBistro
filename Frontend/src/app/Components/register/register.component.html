@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="box">
+            <div class="heading">
+                <p>Welcome to bistro</p>
+            </div>
+            <div class="texts">
+                <form [formGroup]="RegisterForm">
+                    <label>Name</label><br>
+                    <input formControlName="fullName" type="text">
+                    <br>
+                    <label>Email</label><br>
+                    <input formControlName="email" type="text">
+                    <br>
+                    <label>Enter Phone Number</label><br>
+                    <input placeholder="+91 |" formControlName="mobile" type="text">
+                    <br>
+                        <div class="three">
+                            <label>Enter password</label><br>
+                            <input [type]="getIputType1()" formControlName="password">
+
+                            <button mat-icon-button matSuffix (click)="visibilityToggle1()">
+                                <mat-icon>{{getVisibility1()}}</mat-icon>
+                            </button>
+
+                        </div>
+                    <button class="btn" type="submit" (click)="onRegister()">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
